@@ -108,6 +108,14 @@ button:hover {
   opacity: 0.8;
 }
 
+button::-moz-focus-inner,
+button:focus img {
+  border: 0;
+  outline: 0;
+  opacity: 1;
+  box-shadow: 1px 4px 18px hsla(0, 36%, 70%, 0.5);
+}
+
 small {
   display: none;
   margin-top: 10px;
