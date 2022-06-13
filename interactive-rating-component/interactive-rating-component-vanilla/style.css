@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  font-family: "Overpass", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/*
+hsl(215deg 24% 14%)
+hsl(215deg 31% 21%)
+hsl(211deg 22% 19%);
+
+*/
+
+body {
+  background-color: var(--very-dark-blue);
+  height: calc(100vh - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating__wrapper {
+  max-width: 345px;
+  background-color: hsl(215, 24%, 14%);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.rating__wrapper img {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: hsl(215, 31%, 21%);
+}
+
+h2 {
+  color: var(--white);
+}
+
+p {
+  font-size: 15px;
+  color: var(--medium-grey);
+}
+
+.rating__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rating__bar-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(215, 31%, 21%);
+  color: var(--medium-grey);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.rating__bar-item.active {
+  color: var(--white);
+  background-color: var(--light-grey);
+}
+
+.rating__bar-item:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.submit {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.submit:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.thankyou__wrapper {
+  display: none;
+  max-width: 345px;
+  background-color: hsl(215, 24%, 14%);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.thankyou__wrapper img {
+  padding: 10px;
+}
+
+.text-wrapper {
+  margin: 20px 0 40px 0;
+}
+
+.thankyou__wrapper .rating {
+  color: var(--orange);
+  background-color: hsl(215, 31%, 21%);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 20px;
+}
